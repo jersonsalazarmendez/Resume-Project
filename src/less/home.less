@@ -1,0 +1,285 @@
+/*
+Site: Diamond Web and Design
+Author:Jerson Salazar Méndez
+Updated:March,2016
+Updated by:Jerson Salazar Méndez
+*/
+//import is for import files from resources.less
+@import "resourses.less";
+
+/*Mobile Firts*/
+*{
+	.border-s ();
+}
+
+
+/* Side Menu */
+.menu-home{
+	#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    margin-right: -250px;
+    overflow-y: auto;
+    color:@body-color;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    background: @yellow;
+	}
+
+	.sidebar-nav {
+	    position: absolute;
+	    top: 0;
+	    width: 250px;
+	    margin: 0;
+	    padding: 0;
+	    list-style: none;
+	}
+
+	.sidebar-nav li {
+	    text-indent: 20px;
+	    line-height: 40px;
+	}
+
+	.sidebar-nav li a {
+	    display: block;
+	    text-decoration: none;
+	    color: black;
+	}
+
+	.sidebar-nav li a:hover {
+	    text-decoration: none;
+	    color: #fff;
+	    background: rgba(255,255,255,0.2);
+	}
+
+	.sidebar-nav li a:active,
+	.sidebar-nav li a:focus {
+	    text-decoration: none;
+	}
+
+	.sidebar-nav > .sidebar-brand {
+	    height: 55px;
+	    font-size: 18px;
+	    line-height: 55px;
+	}
+
+	.sidebar-nav > .sidebar-brand a {
+	    color: #999;
+	}
+
+	.sidebar-nav > .sidebar-brand a:hover {
+	    color: #fff;
+	    background: none;
+	}
+
+	#menu-toggle {
+	    z-index: 4;
+	    position: fixed;
+	    top: 0;
+	    right: 0;
+	    width: 50px;
+	    height: 50px;
+	    color:@yellow;
+		    &:hover{
+		    	color:white;
+		    }
+	}
+
+	#sidebar-wrapper.active {
+	    right: 250px;
+	    width: 250px;
+	    -webkit-transition: all 0.4s ease 0s;
+	    -moz-transition: all 0.4s ease 0s;
+	    -ms-transition: all 0.4s ease 0s;
+	    -o-transition: all 0.4s ease 0s;
+	    transition: all 0.4s ease 0s;
+	}
+
+	.toggle {
+	    margin: 5px 5px 0 0;
+	}
+}
+
+
+/*End Side Menu ======================================================================*/
+
+.sec-home{
+	overflow: hidden;
+		.home-black{
+			background: black;
+			height:auto;
+			z-index: 3;
+			position: relative;/*overlapin*/
+		}
+
+	.home-1{
+		z-index:1;
+	}
+
+	.code{
+		background: @nav-color;
+		color:@yellow;
+		font-size: 20px;
+	}
+
+	.social{
+		padding: 35px 20px;
+		color:@yellow;
+			&:hover{
+				cursor: pointer;
+				color: @body-color;
+			}
+	}
+
+
+	#mycanvas{
+		background: @yellow;
+		.opacity(@opacity:0.2);
+		top:0;
+		transform:rotate(45deg);
+		-webkit-transform:rotate(45deg);
+		z-index:2;
+		position: fixed;
+		width:90%;
+		height: 900px;
+		margin-left: -250px;/*translate overlapin*/
+		padding: 100px;
+	}
+
+	.jerson{
+		position: relative;
+		left:~"calc(50% - 175px)";
+		width: 350px;
+		height: auto;
+		padding:30px;
+	}
+
+}
+
+
+/*===========================medias queries===========================*/
+/*screen xs*/
+@media @screen-xs{
+
+	.sec-home{
+		overflow: hidden;
+		.jerson{
+			width: 250px;
+		}
+
+		#mycanvas{
+			width:90%;
+			height: 500px;
+		}
+
+		.code{
+			font-size: 15px;
+			padding: 20px;
+		}
+
+		.home-black-2{
+			width: 100%;
+			height: 250px;
+				p{
+					padding-top:50px; 
+				}
+		}		
+	}
+
+
+
+}/* end screen xs*/
+
+
+
+/*screen sm*/
+@media @screen-sm-table{
+
+	.sec-home{
+		overflow: hidden;
+		.home-black-2{
+			width: 100%;
+			height: 400px;
+				p{
+					padding-top:100px; 
+				}
+		}
+	}
+		
+
+}//end tablet sm
+
+
+
+/*screen md*/
+@media @screen-md-table{
+	.sec-home{
+		overflow: hidden;
+		background: black;
+		.home-black-2{
+			width: 100%;
+			height: 625px;
+			p{
+				padding-top:100px;
+				font-size: 30px; 
+				.border-s ();
+			}
+		}
+	}
+}//end tablet md
+
+
+/*screen extra lg*/
+@media @screen-lg-extra-long-desktop{
+
+	.sec-home{
+		overflow: hidden;
+		background: black;
+		.home-black{
+			.social{
+				text-align: center;
+				margin: 0;
+				left: ~"calc(50% -1000px)";
+			}
+		}
+		.home-black-2{
+			width: 100%;
+			height:auto;
+			background: black;
+			p{
+				padding-top:20px;
+				font-size: 30px; 
+				.border-s ();
+			}
+		}
+
+		#mycanvas{
+			display: none;
+		}
+	}//sec home
+}//end extra long desk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+//Site: Diamond Web and Design
+//Author:Jerson Salazar Méndez
+//Updated:March,2016
+//Updated by:Jerson Salazar Méndez
+
+
+//Variables
+@body-color: white;
+@nav-color: black;
+@bg-color:#161315;
+@blue:#059CA0;
+@rutaBaseImg: '../img/';
+@z-i:1000;
+@sizepx:100px;
+@font:13px;
+@type: border-box;
+@porc:100%;
+@h3-bottom:20px;
+@h4-bottom:10px;
+@timing:ease-in-out;
+@direction:forwards;
+@zero:0;
+@mb:margin-bottom;
+@mt:margin-top;
+@p:padding;
+@m:margin;
+@pt:padding-top;
+@pb:padding-bottom;
+@pl:padding-left;
+@animation:scrol 2s linear infinite;
+@animation-logo:logo 5s .5s @timing @direction;
+@bg-gray:#BFBDBB;
+@bg-gray1:#898383;
+@bg-gray2:#4C4747;
+@bg-gray3:#232020;
+@yellow:#FFD400;
+
+
+
+//Mixing
+.border-s (){
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+.rounded(@radius:10px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+   -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.opacity(@opacity: 0.5) {
+	-webkit-opacity: @opacity;
+  	-moz-opacity: @opacity;
+  	-ms-opacity: @opacity;
+  	-o-opacity: @opacity;
+  	opacity: @opacity;
+}
+
+.fixed-bottom(){
+  position: fixed;
+}
+
+
+//Breakpoints
+@screen-xs: 				~"(max-width: 767px)";
+@screen-sm-table:			~"(min-width: 768px) and (max-width: 799px)";
+@screen-md-table:     ~"(min-width: 800px) and (max-width: 991px)";
+@screen-md-desktop:			~"(min-width: 992px) and (max-width: 1024px)";
+@screen-lg-long-desktop:    ~"(min-width: 1025px) and (max-width: 1400px)";
+@screen-lg-extra-long-desktop:~"(min-width: 1401px)";
+
+
+

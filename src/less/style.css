@@ -1,0 +1,676 @@
+/*
+Site: Diamond Web and Design
+Author:Jerson Salazar Méndez
+Updated:March,2016
+Updated by:Jerson Salazar Méndez
+*/
+/*Mobile Firts*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Side Menu */
+.menu-home #sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  margin-right: -250px;
+  overflow-y: auto;
+  color: white;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  background: #FFD400;
+}
+.menu-home .sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu-home .sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+.menu-home .sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+.menu-home .sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+.menu-home .sidebar-nav li a:active,
+.menu-home .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+.menu-home .sidebar-nav > .sidebar-brand {
+  height: 55px;
+  font-size: 18px;
+  line-height: 55px;
+}
+.menu-home .sidebar-nav > .sidebar-brand a {
+  color: #999;
+}
+.menu-home .sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+.menu-home #menu-toggle {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  color: #FFD400;
+}
+.menu-home #menu-toggle:hover {
+  color: white;
+}
+.menu-home #sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.menu-home .toggle {
+  margin: 5px 5px 0 0;
+}
+/*End Side Menu ======================================================================*/
+.sec-home {
+  overflow: hidden;
+}
+.sec-home .home-black {
+  background: black;
+  height: auto;
+  z-index: 3;
+  position: relative;
+  /*overlapin*/
+}
+.sec-home .home-1 {
+  z-index: 1;
+}
+.sec-home .code {
+  background: black;
+  color: #FFD400;
+  font-size: 20px;
+}
+.sec-home .social {
+  padding: 35px 20px;
+  color: #FFD400;
+}
+.sec-home .social:hover {
+  cursor: pointer;
+  color: white;
+}
+.sec-home #mycanvas {
+  background: #FFD400;
+  -webkit-opacity: 0.2;
+  -moz-opacity: 0.2;
+  -ms-opacity: 0.2;
+  -o-opacity: 0.2;
+  opacity: 0.2;
+  top: 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  z-index: 2;
+  position: fixed;
+  width: 90%;
+  height: 900px;
+  margin-left: -250px;
+  /*translate overlapin*/
+  padding: 100px;
+}
+.sec-home .jerson {
+  position: relative;
+  left: calc(50% - 175px);
+  width: 350px;
+  height: auto;
+  padding: 30px;
+}
+/*===========================medias queries===========================*/
+/*screen xs*/
+@media (max-width: 767px) {
+  .sec-home {
+    overflow: hidden;
+  }
+  .sec-home .jerson {
+    width: 250px;
+  }
+  .sec-home #mycanvas {
+    width: 90%;
+    height: 500px;
+  }
+  .sec-home .code {
+    font-size: 15px;
+    padding: 20px;
+  }
+  .sec-home .home-black-2 {
+    width: 100%;
+    height: 250px;
+  }
+  .sec-home .home-black-2 p {
+    padding-top: 50px;
+  }
+}
+/* end screen xs*/
+/*screen sm*/
+@media (min-width: 768px) and (max-width: 799px) {
+  .sec-home {
+    overflow: hidden;
+  }
+  .sec-home .home-black-2 {
+    width: 100%;
+    height: 400px;
+  }
+  .sec-home .home-black-2 p {
+    padding-top: 100px;
+  }
+}
+/*screen md*/
+@media (min-width: 800px) and (max-width: 991px) {
+  .sec-home {
+    overflow: hidden;
+    background: black;
+  }
+  .sec-home .home-black-2 {
+    width: 100%;
+    height: 625px;
+  }
+  .sec-home .home-black-2 p {
+    padding-top: 100px;
+    font-size: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+/*screen extra lg*/
+@media (min-width: 1401px) {
+  .sec-home {
+    overflow: hidden;
+    background: black;
+  }
+  .sec-home .home-black .social {
+    text-align: center;
+    margin: 0;
+    left: calc(50% -1000px);
+  }
+  .sec-home .home-black-2 {
+    width: 100%;
+    height: auto;
+    background: black;
+  }
+  .sec-home .home-black-2 p {
+    padding-top: 20px;
+    font-size: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .sec-home #mycanvas {
+    display: none;
+  }
+}
+/*
+Site: Diamond Web and Design
+Author:Jerson Salazar Méndez
+Updated:March,2016
+Updated by:Jerson Salazar Méndez
+*/
+/*Mobile Firts*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Side Menu */
+.menu-about #sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  margin-right: -250px;
+  overflow-y: auto;
+  background: black;
+  color: #FFD400;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.menu-about .sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu-about .sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+.menu-about .sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+.menu-about .sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #FFD400;
+  background: rgba(255, 255, 255, 0.2);
+}
+.menu-about .sidebar-nav li a:active,
+.menu-about .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+.menu-about .sidebar-nav > .sidebar-brand {
+  height: 55px;
+  font-size: 18px;
+  line-height: 55px;
+}
+.menu-about .sidebar-nav > .sidebar-brand a {
+  color: #999;
+}
+.menu-about .sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+.menu-about #menu-toggle {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  color: #FFD400;
+}
+.menu-about #menu-toggle:hover {
+  color: #FFD400;
+}
+.menu-about #sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.menu-about .toggle {
+  margin: 5px 5px 0 0;
+}
+.menu-about .fa-times {
+  color: #FFD400;
+}
+.menu-about .fa-times:hover {
+  cursor: pointer;
+  color: white;
+}
+/*============================================================*/
+/*header*/
+.header-about {
+  background: black;
+  height: 150px;
+  width: 100%;
+}
+.header-about img {
+  padding-top: 40px;
+}
+/*sec-about*/
+.sec-about {
+  background: black;
+}
+.sec-about .info {
+  background: black;
+  color: #FFD400;
+  height: auto;
+  overflow: hidden;
+}
+.sec-about .info-2 {
+  padding: 200px 0;
+  line-height: 30px;
+  font-family: 'Inconsolata';
+}
+.sec-about .foto {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  overflow: hidden;
+}
+.sec-about .code {
+  background: black;
+  color: #FFD400;
+  font-size: 20px;
+  margin-top: 0;
+}
+.sec-about .social {
+  padding: 35px 20px;
+  color: #FFD400;
+  margin-top: 0;
+}
+.sec-about .social:hover {
+  cursor: pointer;
+  color: white;
+}
+.sec-about .footer-about {
+  padding: 0;
+  margin: 0;
+}
+/* end sec-about*/
+/*MEDIAS==============MEDIAS===================MEDIAS==========================*/
+/*scren xs*/
+@media (max-width: 767px) {
+  .header-about {
+    background: black;
+    height: 120px;
+    width: 100%;
+  }
+  .header-about img {
+    padding: 40px;
+  }
+  .sec-about .info {
+    background: #FFD400;
+    color: black;
+  }
+  .sec-about .info-2 {
+    padding: 10px;
+    height: auto;
+  }
+  .sec-about .foto {
+    width: 100%;
+    height: auto;
+  }
+  .sec-about .code {
+    font-size: 15px;
+  }
+  .sec-about .social {
+    padding: 15px 10px;
+  }
+}
+/*end scren xs*/
+/*scren sm*/
+@media (min-width: 768px) and (max-width: 799px) {
+  .sec-about .foto {
+    width: 100%;
+    height: auto;
+  }
+  .sec-about .info-2 {
+    height: auto;
+  }
+}
+/*end scren sm*/
+/*scren md tablet*/
+@media (min-width: 800px) and (max-width: 991px) {
+  .sec-about .foto {
+    width: 100%;
+    height: auto;
+  }
+  .sec-about .info-2 {
+    height: auto;
+    padding: 100px 0;
+  }
+}
+/*end scren md tablet*/
+/*scren md desktop*/
+@media (min-width: 992px) and (max-width: 1024px) {
+  .sec-about .foto {
+    width: 50%;
+    height: 320px;
+    display: block;
+    overflow: visible;
+  }
+  .sec-about .info-2 {
+    height: 320px;
+    font-size: 20px;
+    padding: 6px;
+  }
+  .sec-about .home-black {
+    position: relative;
+    margin-bottom: 0px;
+    padding: 50px;
+  }
+  .sec-about .social {
+    padding: 50px;
+    position: relative;
+    margin-top: 60px;
+  }
+}
+/*end scren md desktop*/
+/*scren lg-long desktop*/
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .sec-about html {
+    background: black;
+  }
+  .sec-about .info-2 {
+    height: 408px;
+    font-size: 20px;
+    padding: 80px 10px;
+    text-align: center;
+  }
+  .sec-about .foto {
+    width: 50%;
+    height: 431px;
+  }
+  .sec-about .footer-about {
+    padding-top: 50px;
+  }
+  /*sec-about*/
+}
+/*scren lg-long desktop*/
+/*scren lg-extra-long desktop*/
+@media (min-width: 1401px) {
+  html {
+    background: black;
+  }
+  .sec-about .info {
+    background: black;
+    width: 50%;
+    height: auto;
+    color: #FFD400;
+  }
+  .sec-about .info .info-2 {
+    padding: 200px 50px;
+    text-align: center;
+    font-size: 30px;
+  }
+  .sec-about .home-black-2 {
+    width: 100%;
+    height: auto;
+    background: black;
+  }
+  .sec-about .home-black-2 p {
+    padding-top: 20px;
+    font-size: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .sec-about .footer-about .home-2 .social {
+    padding: 150px 50px;
+  }
+}
+/*end scren lg-extra-long desktop*/
+/*
+Site: Diamond Web and Design
+Author:Jerson Salazar Méndez
+Updated:March,2016
+Updated by:Jerson Salazar Méndez
+*/
+/*Mobile Firts*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+}
+/* Side services */
+.menu-services #sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  margin-right: -250px;
+  overflow-y: auto;
+  background: #282424;
+  color: black;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.menu-services .sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu-services .sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+.menu-services .sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+.menu-services .sidebar-nav li a:hover {
+  text-decoration: none;
+  color: black;
+  background: rgba(255, 255, 255, 0.2);
+}
+.menu-services .sidebar-nav li a:active,
+.menu-services .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+.menu-services .sidebar-nav > .sidebar-brand {
+  height: 55px;
+  font-size: 18px;
+  line-height: 55px;
+}
+.menu-services .sidebar-nav > .sidebar-brand a {
+  color: #999;
+}
+.menu-services .sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+.menu-services #menu-toggle {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  color: #FFD400;
+}
+.menu-services #menu-toggle:hover {
+  color: #FFD400;
+}
+.menu-services #sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.menu-services .toggle {
+  margin: 5px 5px 0 0;
+}
+.menu-services .fa-times {
+  color: #FFD400;
+}
+.menu-services .fa-times:hover {
+  cursor: pointer;
+  color: white;
+}
+.sec-services {
+  font-family: 'Inconsolata';
+  color: white;
+  background: black;
+}
+.sec-services h2,
+.sec-services h3,
+.sec-services h4 {
+  margin: 50px 0;
+}
+.sec-services .row-2 > div > ul {
+  padding: 0;
+}
+.sec-services .row-2 > div > ul > li {
+  color: #FFD400;
+  font-size: 20px;
+}
+.sec-services .row-2 h4 > i:hover {
+  cursor: pointer;
+  color: #FFD400;
+}
+.sec-services .row-2 a:link {
+  color: #ffffff;
+}
+.sec-services .row-2 a:visited {
+  color: #ffffff;
+}
+.sec-services .row-2 a:active {
+  color: #ffffff;
+}
+.sec-services .row-2 a:hover {
+  color: #FFD400;
+}
+.sec-services .row-3 {
+  background: #FFD400;
+  color: black;
+}
+.sec-services .row-3 img {
+  margin-bottom: 50px;
+}
+.sec-services .row-3 > a button {
+  width: 100px;
+  height: auto;
+  background: black;
+  color: #FFD400;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+}
+.sec-services .row-3 > a button:hover {
+  color: white;
+}

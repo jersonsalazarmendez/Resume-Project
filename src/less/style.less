@@ -1,0 +1,862 @@
+/*
+Site: Diamond Web and Design
+Author:Jerson Salazar Méndez
+Updated:March,2016
+Updated by:Jerson Salazar Méndez
+*/
+//import is for import files from resources.less
+@import "resourses.less";
+
+/*Mobile Firts*/
+*{
+	.border-s ();
+}
+
+
+/* Side Menu */
+.menu-home{
+	#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    margin-right: -250px;
+    overflow-y: auto;
+    color:@body-color;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    background: @yellow;
+	}
+
+	.sidebar-nav {
+	    position: absolute;
+	    top: 0;
+	    width: 250px;
+	    margin: 0;
+	    padding: 0;
+	    list-style: none;
+	}
+
+	.sidebar-nav li {
+	    text-indent: 20px;
+	    line-height: 40px;
+	}
+
+	.sidebar-nav li a {
+	    display: block;
+	    text-decoration: none;
+	    color: black;
+	}
+
+	.sidebar-nav li a:hover {
+	    text-decoration: none;
+	    color: #fff;
+	    background: rgba(255,255,255,0.2);
+	}
+
+	.sidebar-nav li a:active,
+	.sidebar-nav li a:focus {
+	    text-decoration: none;
+	}
+
+	.sidebar-nav > .sidebar-brand {
+	    height: 55px;
+	    font-size: 18px;
+	    line-height: 55px;
+	}
+
+	.sidebar-nav > .sidebar-brand a {
+	    color: #999;
+	}
+
+	.sidebar-nav > .sidebar-brand a:hover {
+	    color: #fff;
+	    background: none;
+	}
+
+	#menu-toggle {
+	    z-index: 4;
+	    position: fixed;
+	    top: 0;
+	    right: 0;
+	    width: 50px;
+	    height: 50px;
+	    color:@yellow;
+		    &:hover{
+		    	color:white;
+		    }
+	}
+
+	#sidebar-wrapper.active {
+	    right: 250px;
+	    width: 250px;
+	    -webkit-transition: all 0.4s ease 0s;
+	    -moz-transition: all 0.4s ease 0s;
+	    -ms-transition: all 0.4s ease 0s;
+	    -o-transition: all 0.4s ease 0s;
+	    transition: all 0.4s ease 0s;
+	}
+
+	.toggle {
+	    margin: 5px 5px 0 0;
+	}
+}
+
+
+/*End Side Menu ======================================================================*/
+
+.sec-home{
+	overflow: hidden;
+		.home-black{
+			background: black;
+			height:auto;
+			z-index: 3;
+			position: relative;/*overlapin*/
+		}
+
+	.home-1{
+		z-index:1;
+	}
+
+	.code{
+		background: @nav-color;
+		color:@yellow;
+		font-size: 20px;
+	}
+
+	.social{
+		padding: 35px 20px;
+		color:@yellow;
+			&:hover{
+				cursor: pointer;
+				color: @body-color;
+			}
+	}
+
+
+	#mycanvas{
+		background: @yellow;
+		.opacity(@opacity:0.2);
+		top:0;
+		transform:rotate(45deg);
+		-webkit-transform:rotate(45deg);
+		z-index:2;
+		position: fixed;
+		width:90%;
+		height: 900px;
+		margin-left: -250px;/*translate overlapin*/
+		padding: 100px;
+	}
+
+	.jerson{
+		position: relative;
+		left:~"calc(50% - 175px)";
+		width: 350px;
+		height: auto;
+		padding:30px;
+	}
+
+}
+
+
+/*===========================medias queries===========================*/
+/*screen xs*/
+@media @screen-xs{
+
+	.sec-home{
+		overflow: hidden;
+		.jerson{
+			width: 250px;
+		}
+
+		#mycanvas{
+			width:90%;
+			height: 500px;
+		}
+
+		.code{
+			font-size: 15px;
+			padding: 20px;
+		}
+
+		.home-black-2{
+			width: 100%;
+			height: 250px;
+				p{
+					padding-top:50px; 
+				}
+		}		
+	}
+
+
+
+}/* end screen xs*/
+
+
+
+/*screen sm*/
+@media @screen-sm-table{
+
+	.sec-home{
+		overflow: hidden;
+		.home-black-2{
+			width: 100%;
+			height: 400px;
+				p{
+					padding-top:100px; 
+				}
+		}
+	}
+		
+
+}//end tablet sm
+
+
+
+/*screen md*/
+@media @screen-md-table{
+	.sec-home{
+		overflow: hidden;
+		background: black;
+		.home-black-2{
+			width: 100%;
+			height: 625px;
+			p{
+				padding-top:100px;
+				font-size: 30px; 
+				.border-s ();
+			}
+		}
+	}
+}//end tablet md
+
+
+/*screen extra lg*/
+@media @screen-lg-extra-long-desktop{
+
+	.sec-home{
+		overflow: hidden;
+		background: black;
+		.home-black{
+			.social{
+				text-align: center;
+				margin: 0;
+				left: ~"calc(50% -1000px)";
+			}
+		}
+		.home-black-2{
+			width: 100%;
+			height:auto;
+			background: black;
+			p{
+				padding-top:20px;
+				font-size: 30px; 
+				.border-s ();
+			}
+		}
+
+		#mycanvas{
+			display: none;
+		}
+	}//sec home
+}//end extra long desk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Site: Diamond Web and Design
+Author:Jerson Salazar Méndez
+Updated:March,2016
+Updated by:Jerson Salazar Méndez
+*/
+//import is for import files from resources.less
+@import "resourses.less";
+
+/*Mobile Firts*/
+*{
+	.border-s ();
+}
+
+
+/* Side Menu */
+.menu-about{
+    #sidebar-wrapper {
+        z-index: 1000;
+        position: fixed;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        margin-right: -250px;
+        overflow-y: auto;
+        background:@nav-color;
+        color:@yellow;
+        -webkit-transition: all 0.4s ease 0s;
+        -moz-transition: all 0.4s ease 0s;
+        -ms-transition: all 0.4s ease 0s;
+        -o-transition: all 0.4s ease 0s;
+        transition: all 0.4s ease 0s;
+    }
+
+    .sidebar-nav {
+        position: absolute;
+        top: 0;
+        width: 250px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+    }
+
+    .sidebar-nav li {
+        text-indent: 20px;
+        line-height: 40px;
+    }
+
+    .sidebar-nav li a {
+        display: block;
+        text-decoration: none;
+        color:@body-color;
+    }
+
+    .sidebar-nav li a:hover {
+        text-decoration: none;
+        color:@yellow;
+        background: rgba(255,255,255,0.2);
+    }
+
+    .sidebar-nav li a:active,
+    .sidebar-nav li a:focus {
+        text-decoration: none;
+    }
+
+    .sidebar-nav > .sidebar-brand {
+        height: 55px;
+        font-size: 18px;
+        line-height: 55px;
+    }
+
+    .sidebar-nav > .sidebar-brand a {
+        color: #999;
+    }
+
+    .sidebar-nav > .sidebar-brand a:hover {
+        color: #fff;
+        background: none;
+    }
+
+    #menu-toggle {
+        z-index: 4;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        color:@yellow;
+            &:hover{
+                color:@yellow;
+            }
+    }
+
+    #sidebar-wrapper.active {
+        right: 250px;
+        width: 250px;
+        -webkit-transition: all 0.4s ease 0s;
+        -moz-transition: all 0.4s ease 0s;
+        -ms-transition: all 0.4s ease 0s;
+        -o-transition: all 0.4s ease 0s;
+        transition: all 0.4s ease 0s;
+    }
+
+    .toggle {
+        margin: 5px 5px 0 0;
+    }
+
+    .fa-times{
+        color:@yellow;
+            &:hover{
+                cursor: pointer;
+                color: @body-color;
+            }
+
+    }
+}//end menu-about
+
+
+/*============================================================*/
+
+/*header*/
+.header-about{
+
+        background: black;
+        height: 150px;
+        width: 100%;
+            img{
+                padding-top: 40px;
+            }
+    }
+
+
+/*sec-about*/
+.sec-about{
+            background: @nav-color;
+    .info{
+        background:@nav-color;
+        color:@yellow;
+        height: auto;
+        overflow: hidden;
+        }
+
+    .info-2{
+        padding: 200px 0;
+        line-height: 30px;
+        font-family: 'Inconsolata', ;
+    }
+
+    .foto{
+        width: 50%;
+        height: auto;
+        padding: 0;
+        margin:0;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .code{
+        background: @nav-color;
+        color:@yellow;
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .social{
+        padding: 35px 20px;
+        color:@yellow;
+        margin-top: 0;
+            &:hover{
+                cursor: pointer;
+                color: @body-color;
+            }
+    }
+
+    .footer-about{
+        padding: 0;
+        margin: 0;
+    }
+
+
+}/* end sec-about*/
+
+/*MEDIAS==============MEDIAS===================MEDIAS==========================*/
+
+
+/*scren xs*/
+@media @screen-xs{
+    .header-about{
+        background: black;
+        height: 120px;
+        width: 100%;
+            img{
+                padding: 40px;
+            }
+    }
+
+    .sec-about{
+          
+        .info{
+            background: @yellow;
+            color:@nav-color;
+            }
+
+        .info-2{
+            padding:10px;
+            height: auto;
+        }
+
+        .foto{
+            width: 100%;
+            height: auto;
+        }
+
+        .code{
+            font-size: 15px;
+        }
+
+        .social{
+            padding: 15px 10px;
+        }
+    }
+
+}/*end scren xs*/
+
+
+/*scren sm*/
+@media @screen-sm-table{
+    .sec-about{
+        .foto{
+            width: 100%;
+            height: auto;
+        }
+
+        .info-2{
+            height: auto;
+        }
+    }
+}/*end scren sm*/
+
+
+/*scren md tablet*/
+@media @screen-md-table{
+    .sec-about{
+        .foto{
+            width: 100%;
+
+            height: auto;
+        }
+
+        .info-2{
+            height: auto;
+            padding: 100px 0;
+        }
+    }
+
+}/*end scren md tablet*/
+
+
+/*scren md desktop*/
+@media @screen-md-desktop{
+    .sec-about{
+     
+        .foto{
+            width: 50%;
+            height:320px;
+            display: block;
+            overflow: visible;
+        }
+
+        .info-2{
+            height: 320px;
+            font-size: 20px;
+            padding: 6px;
+        }
+
+        .home-black{
+            position: relative;
+            margin-bottom: 0px;
+            padding: 50px;
+        }
+
+        .social{
+            padding: 50px;
+            position: relative;
+            margin-top:60px;
+        }
+    }
+
+}/*end scren md desktop*/
+
+
+/*scren lg-long desktop*/
+@media @screen-lg-long-desktop{
+   
+    .sec-about{
+         html{
+        background: black;
+    }
+        
+        .info-2{
+            height: 408px;
+            font-size: 20px;
+            padding:80px 10px;
+            text-align: center;
+        }
+     
+        .foto{
+            width: 50%;
+            height:431px;
+        }
+
+        .footer-about{
+            padding-top: 50px;
+        }
+    }/*sec-about*/
+}/*scren lg-long desktop*/
+
+
+
+/*scren lg-extra-long desktop*/
+@media @screen-lg-extra-long-desktop{
+   html{
+    background: black;
+   }
+    .sec-about{
+
+        .info{
+            background: black;
+            width: 50%;
+            height: auto;
+            color:@yellow;
+                .info-2{
+                    padding: 200px 50px;
+                    text-align: center;
+                    font-size: 30px;
+                }//info-2
+        }//info
+
+        .home-black-2{
+            width: 100%;
+            height:auto;
+            background: black;
+            p{
+                padding-top:20px;
+                font-size: 30px; 
+                .border-s ();
+            }
+        }//hom-black-2
+
+        .footer-about{
+                .home-2{
+                    .social{
+                        padding:150px 50px;
+                    }
+                }
+            } //footer-about
+
+    }//sec-about
+}/*end scren lg-extra-long desktop*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Site: Diamond Web and Design
+Author:Jerson Salazar Méndez
+Updated:March,2016
+Updated by:Jerson Salazar Méndez
+*/
+//import is for import files from resources.less
+@import "resourses.less";
+
+/*Mobile Firts*/
+*{
+	.border-s ();
+    list-style: none;
+    
+}
+
+
+/* Side services */
+.menu-services{
+    #sidebar-wrapper {
+        z-index: 1000;
+        position: fixed;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        margin-right: -250px;
+        overflow-y: auto;
+        background:#282424;
+        color:@nav-color;
+        -webkit-transition: all 0.4s ease 0s;
+        -moz-transition: all 0.4s ease 0s;
+        -ms-transition: all 0.4s ease 0s;
+        -o-transition: all 0.4s ease 0s;
+        transition: all 0.4s ease 0s;
+    }
+
+    .sidebar-nav {
+        position: absolute;
+        top: 0;
+        width: 250px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+    }
+
+    .sidebar-nav li {
+        text-indent: 20px;
+        line-height: 40px;
+    }
+
+    .sidebar-nav li a {
+        display: block;
+        text-decoration: none;
+        color:@body-color;
+    }
+
+    .sidebar-nav li a:hover {
+        text-decoration: none;
+        color:black;
+        background: rgba(255,255,255,0.2);
+    }
+
+    .sidebar-nav li a:active,
+    .sidebar-nav li a:focus {
+        text-decoration: none;
+    }
+
+    .sidebar-nav > .sidebar-brand {
+        height: 55px;
+        font-size: 18px;
+        line-height: 55px;
+    }
+
+    .sidebar-nav > .sidebar-brand a {
+        color: #999;
+    }
+
+    .sidebar-nav > .sidebar-brand a:hover {
+        color: #fff;
+        background: none;
+    }
+
+    #menu-toggle {
+        z-index: 4;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        color:@yellow;
+            &:hover{
+                color:@yellow;
+            }
+    }
+
+    #sidebar-wrapper.active {
+        right: 250px;
+        width: 250px;
+        -webkit-transition: all 0.4s ease 0s;
+        -moz-transition: all 0.4s ease 0s;
+        -ms-transition: all 0.4s ease 0s;
+        -o-transition: all 0.4s ease 0s;
+        transition: all 0.4s ease 0s;
+    }
+
+    .toggle {
+        margin: 5px 5px 0 0;
+    }
+
+    .fa-times{
+        color:@yellow;
+            &:hover{
+                cursor: pointer;
+                color: @body-color;
+            }
+
+    }
+}//end menu-services
+
+.sec-services{
+     font-family: 'Inconsolata';
+     color: @body-color;
+     background: @nav-color;
+
+     h2,h3,h4{
+        margin:50px 0;
+     }
+    .row-2{
+        > div{
+            > ul{
+                padding: 0;
+                > li{
+                    color:@yellow;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        h4{
+            > i{
+                 &:hover {
+                    cursor: pointer;
+                    color:@yellow;
+                }
+            }
+        }
+        a:link {color:#ffffff;}
+        a:visited {color:#ffffff;}
+        a:active {color:#ffffff;}
+        a:hover {color:@yellow;}
+    }//row-2
+
+    .row-3{
+        background: @yellow;
+        color:@nav-color;
+
+            img{
+                margin-bottom:50px;
+            }
+            >a{
+                button{
+                width: 100px;
+                height: auto;
+                background: @nav-color;
+                color: @yellow;
+                .rounded();
+                border: none;
+                    &:hover{
+                        color:white;
+                    }
+                } 
+            }
+    }
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
